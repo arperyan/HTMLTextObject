@@ -1,0 +1,8 @@
+<div qv-extension class="">
+  <button ng-if="object.inEditState()" type="button" name="button" qva-activate="saveHTML()">Save</button>
+  <!-- If the app is in edit mode, render a textarea with the HTML -->
+  <div ng-if="object.inEditState()" class="example-text-area" qva-activate="focus($event)" ng-bind="layout.custom.html" contenteditable="true"></div>
+  <!-- If the app is in analysis mode, render a div with the parsed HTML -->
+  <div ng-if="!object.inEditState()" class="" ng-bind-html="layout.custom.html" contenteditable="true"></div>
+  <div text-angular="text-angular" name="htmlcontent" ng-model="htmlcontent" ta-disabled='disabled'></div>
+</div>
